@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Service
+MimeType=application/octet-stream;
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+Actions=openKDev5;
+
+[Desktop Action openKDev5]
+Name=Open In Active KDevelop5
+Icon=kdevelop
+Exec=/bin/sh -c "qdbus `qdbus | grep 'kdevelop-'` /org/kdevelop/DocumentController openDocumentSimple %u"
